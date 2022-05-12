@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var numeroElementos = 10;
+        let serieFibonacci = (cantidad) => {
+            let serieTexto = "0";
+            let anterior = 0;
+            let actual = 1;
+            let suma = 0;
+            for(let idx = 1; idx < cantidad; idx++){
+                suma = anterior + actual;
+                serieTexto += ","+suma;
+                if(idx > 1){
+                    anterior = actual;
+                    actual = suma;
+                }
+            }
+            return serieTexto;
+        }
+        console.log(serieFibonacci(numeroElementos));
+    </script>
+
+</head>
+<body>
+</body>
+</html>
